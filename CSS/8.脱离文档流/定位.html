@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--定位也可以脱离文档流
+        1.relative:相对定位(不能脱离文档流)
+
+        2.absolute:绝对定位:定在哪里就在那里,同一个区域的可以有很多绝对定位
+        3.fixed:固定定位:随着页面的滚动也不会改变
+
+            属性:
+                left, top, right, bottom
+
+        4.z-index:表示发生堆叠时的显示优先级
+    
+    -->
+
+    <style> 
+        
+        html{
+            height: 5000px;
+        }
+
+        div{
+            width: 200px;
+            height: 200px;
+        }
+
+        .relative{
+            background-color: chartreuse;
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+
+        .relative_1{
+            background-color: red;
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+
+        .absolute{
+            position: absolute;
+            background-color: red;
+            left: 100px;
+            top: 100px;
+
+        }
+
+        .fixed{
+            position: fixed;
+            background-color: rgb(103, 103, 238);
+            right: 30px;
+            bottom: 100px;
+        }
+
+    </style>
+    <!-- 那么会出现什么问题呢?
+        相对定位和绝对定位是相对于父级元素而定的
+        ##会一级一级往上找,直到找到有定位的父级元素,并且与他绑定##
+            比如这里的relative类,父级是html和div,由于div没有定位,所以就与html绑定在一起
+
+    -->
+
+</head>
+
+<body>
+    <div class="relative">底层</div>
+    <div class="relative_1">未脱离文档流的区域</div>
+    <div class="absolute">脱离文档流的区域</div>
+    <div class="fixed">固定的区域</div>
+
+</body>
+
+</html>

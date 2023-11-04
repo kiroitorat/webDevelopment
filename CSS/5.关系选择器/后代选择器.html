@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关系选择器</title>
+    <!--1.后代选择去:E F{} 
+            E的所有后代都会有效果
+
+        2.子代选择器:E>F{}
+            指定后代的某一个儿子有效果
+
+
+        3.相邻兄弟选择器:E+F{}
+            紧挨着E的F才有效果
+
+        4.通用兄弟选择器:E~F{}
+            E下的所有F兄弟都有效果
+
+    -->
+
+    <style>
+        ul li{
+            color: rgb(151, 38, 151);
+            font-size: 30px;
+        }
+
+        ul>div>ol li
+        {
+            color: black;
+            font-size: 20px;
+        }
+
+        ul>div>ol>p+li
+        {
+            color: red;
+            font-size: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <em>后代选择器</em>
+        <li>1</li>
+        <li>22</li>
+        <li>333</li>
+        <li>4444</li>
+        <div>
+            <em>子代选择器</em>
+            <ol>
+                <li>55555</li>
+                <li>666666</li>
+                <p>相邻兄弟选择器</p>
+                <li>7777777</li>
+                <li>88888888</li>
+            </ol>
+        </div>
+    </ul>
+
+
+</body>
+
+</html>
