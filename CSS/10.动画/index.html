@@ -1,0 +1,64 @@
+
+
+<!-- 使用@keyframes创建动画样式
+     使用animation: name来进行属性设置
+-->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        @keyframes My_animal{
+            0%{
+                background-color: red;
+            }
+
+            25%{
+                background-color: aqua;
+            }
+
+            75%{
+                background-color: black ;
+            }
+
+            100%{
+                background-color: red;
+            }
+        }
+
+        .box{
+            width: 300px;
+            height: 300px;
+
+            border-radius: 25px;
+            box-shadow: 10px 10px 50px #05b1a2;
+
+            animation: My_animal 3s linear 0.2ms infinite normal paused;
+        }
+
+            
+        .box:hover{
+            animation-play-state: running;
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
