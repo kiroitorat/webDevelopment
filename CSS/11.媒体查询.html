@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@media</title>
+    <!-- meta属性:保持比例 -->
+
+    <!-- 媒体查询:不同的屏幕尺寸有不同的效果 -->
+
+    <style>
+        .box {
+            height: 500px;
+            width: 500px;
+            background-color: red;
+        }
+
+        @media screen and (max-width: 768px) {
+            .box {
+                background-color: aqua;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 996px) {
+            .box {
+                background-color: brown;
+            }
+        }
+
+        @media screen and (min-width: 996px) {
+            .box {
+                background-color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+
+</body>
+
+</html>
