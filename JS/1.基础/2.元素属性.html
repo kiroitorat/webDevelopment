@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main_div{
+            background-color: brown;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="div" id="div0">1</div>
+
+    <script>
+
+        //使用更换元素与样式表产生交互
+        var e = document.getElementById('div0')
+        e.className = "main_div"
+        e.id = "main"
+
+        e.classList.remove("div")
+        console.log(e.className)
+
+    </script>
+
+</body>
+
+</html>

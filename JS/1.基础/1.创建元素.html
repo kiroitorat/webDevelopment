@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="main"></div>
+
+    <script>
+
+        //javascript内创建元素
+        {
+        // 1.创建元素
+        var new_div = document.createElement('div')
+        var content = document.createTextNode("显示文本")
+
+        var id = document.createAttribute('id')
+        id.value = "111"
+
+        // 2.添加子节点.appendChild
+        new_div.appendChild(content)
+        // 3.添加属性
+        new_div.setAttributeNode(id)
+        }
+
+        //javascript驱动html元素
+        {
+        var main = document.getElementById("main")
+        main.appendChild(new_div)
+
+        }
+        
+
+    </script>
+
+</body>
+
+</html>

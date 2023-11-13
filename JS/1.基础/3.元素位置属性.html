@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+
+            padding: 10px;
+            margin: 20px;
+            background: green;
+        }
+
+        h3{
+            height: 200px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box" id="main_box"></div>
+
+    <h3>1</h3>
+    <h3>2</h3>
+    <h3>3</h3>
+    <h3>4</h3>
+    <h3>5</h3>
+    <h3>6</h3>
+
+    <script>
+
+        //1. clientHeight & clientWidth: 获取视口高度(屏幕高度) 获取页面宽度
+        var box = document.getElementById("main_box")
+        console.log("视口高度为"+document.documentElement.clientHeight)
+        console.log("页面高度为"+box.clientWidth)
+
+        //2. scrollHeight & scrollWidth: 获取包含不可见内容的宽高
+        console.log("全视口高度为"+document.documentElement.scrollHeight)
+        console.log("全页面高度为"+box.scrollWidth)
+
+        // 3. scrollLeft & scrollTop: 获取页面左右滚动像素值 和 上下滚动像素值
+        console.log("视口左滚动为"+document.documentElement.scrollLeft)
+        console.log("视口上下滚动为"+document.documentElement.scrollTop)
+
+        //4. offsetHeight & offsetWidth: 获取元素包含自身的宽高
+
+        //5. offsetLeft & offsetTop: 到定位的父级左边界的间距 和 到上边界的间距
+
+
+
+
+    </script>
+
+</body>
+
+</html>
