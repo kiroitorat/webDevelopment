@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>hello1</div>
+    <div>hello2</div>
+    <div>hello3</div>
+    <div>hello4</div>
+
+    <p class="p1">1</p>
+    <p name="p2">2</p>
+    <p id="P3">3</p>
+    <p class="nav">4</p>
+    <p class="navs">5</p>
+    <p class="navs">6</p>
+
+    <script>
+        //注释
+        /**
+            对象是javascript的核心, 是一种数据类型
+                对象是一组"键值对"的集合
+        **/
+        var object = {
+            name:null,
+            age:20
+        }
+        // 这是一个时间戳,  从1970年1月1日开始计时
+        // Unix认为这是一个时间纪元
+        console.log(new Date(1498798712914))
+        console.log(new Date(198723986507))
+
+        // DOM是JS操作网页的接口, document object model
+        // 显示整个文档树
+        console.log(document)
+
+        //1. 使用document.getElement方法找到元素, 应该是个数组
+        var div_e_1 = document.getElementsByTagName("div")[0]
+        console.log(div_e_1)
+        div_e_1.innerHTML = "通过标签找到了第一个元素"
+
+        var p1 = document.getElementsByClassName("p1")[0]
+        console.log(p1)
+        p1.innerHTML = "通过class找到了元素p1"
+
+        var p2 = document.getElementsByName("p2")[0]
+        p2.innerHTML = "通过Name找到了元素p2"
+
+        var p3 = document.getElementById("P3")
+        p3.innerHTML = "通过唯一的id找到了元素p3"
+
+        //2. 新特性
+        //     A. document.querySelector(选择器)
+        var nav = document.querySelector(".nav")
+        nav.innerHTML = "通过新特性querySelector找到了元素p4"
+        console.log(nav)
+
+        //     B.document.querySelectorAll(选择器)
+        var navs_1 = document.querySelectorAll(".navs")[0]
+        console.log(navs_1)
+        navs_1.innerHTML = "通过querySelectorAll找到了元素组nav"
+
+    </script>
+</body>
+
+</html> 

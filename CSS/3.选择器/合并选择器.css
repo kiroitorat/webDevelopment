@@ -1,0 +1,6 @@
+.kr,.hcy
+{
+    column-rule: 0cap;
+    color: blue;
+}
+/* 这样kr类和hcy类就是共同的css属性了，使用“，”标识 */

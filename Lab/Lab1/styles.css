@@ -1,0 +1,62 @@
+html{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+
+    width: 1980px;
+    height: 1080px;
+    background-size: cover;
+    background-image: url(./Img/seling_result.png);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+html::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5); 
+}
+
+body{
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+}
+
+
+.H1, .H2{
+
+    left: 80px;
+    top: 10px;
+    font-size: 40px;
+    margin: 50px;
+}
+
+.H2>ol{
+    font-size: 20px;
+}
+
+.Chapter_text{
+    font-size: 30px;
+    padding: 5px;
+    margin: 100px;
+    color: #000000;
+}
+
+.end>img{
+    width: 800px;
+    height: 400px;
+    margin-left: 600px;
+}
+
+
+.foot>.right{
+    position: absolute;
+    right: 700px;
+    bottom: 5px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 通过设置display:flex来将一个容器定义为弹性容器 -->
+
+    <!-- 1.默认弹性盒子里横向摆放
+            通过修改flex-direction属性来改变排列方式
+            row:默认的横向
+            row-reverse:反转横向
+            column:纵向摆放
+    -->
+
+    <!-- 
+        2.justify-content属性:水平方向上内容对齐
+                flex-start:居上摆放
+                flex-end:居下摆放
+                center:居中摆放
+
+        3.align-items属性:垂直方向上对齐
+                flex-start:居上摆放
+                flex-end:居下摆放
+                center:居中摆放
+
+     -->
+
+
+     <!-- 
+            3.子属性:
+                flex:表示权重或者比率
+                    一旦设置了flex.那么子盒子的宽度或者是高度则会以flex为主
+
+      -->
+    <style>
+        .container{
+            width: 250px;
+            height: 250px;
+            background-color: #666;
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .box1{
+            width: 50px;
+            height: 50px;
+            background-color: #ff0a0a;
+            flex: 1;
+
+
+        }
+        .box2{
+            width: 50px;
+            height: 50px;
+            background-color: #00e1ff;
+            flex: 2;
+
+            
+        }
+        .box3{
+            width: 50px;
+            height: 50px;
+            background-color: #8400ff;
+            flex: 1;
+
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+
+    </div>
+
+</body>
+
+</html>
