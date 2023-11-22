@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        <!-- 需要注意的一点是如果定时器内直接调用this, 则会向上查找, 到最大父节点body
+        -->
+        var timer = setTimeout(function(){
+            console.log("10s后")
+        }, 10000)
+
+        //取消定时器clearTimeout(timer)
+        
+    </script>
+
+</body>
+
+</html>

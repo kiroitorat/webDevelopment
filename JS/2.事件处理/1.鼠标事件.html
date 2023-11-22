@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="dj">单击</button>
+    <button id="sj">双击</button>
+    <!-- <button id="dj">单击</button>
+    <button id="dj">单击</button>
+    <button id="dj">单击</button>
+    <button id="dj">单击</button>
+    <button id="dj">单击</button> -->
+
+    <script>
+        <!-- 有单击事件或者是双击事件, 持续按住事件等等....... -->
+
+        var dj = document.getElementById("dj");
+        dj.addEventListener("click", function(){
+            console.log("单击");
+        })
+
+        var sj = document.getElementById("sj");
+        sj.addEventListener("dblclick", function(){
+            console.log("双击");
+        })
+
+        
+
+    </script>
+
+</body>
+
+</html>

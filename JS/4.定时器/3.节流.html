@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        h3{
+            height: 400px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3>1</h3>
+    <h3>2</h3>
+    <h3>3</h3>
+    <h3>4</h3>
+    <!-- 在防抖那里你会发现如果按着滚动不松
+        那么事件就不会触发
+
+        节流就是用来优化这个问题的
+            比如搜索应用来说, 使用节流使得我们输入input框时会实时更新而不会过于消耗性能
+    -->
+    <script>
+
+        function throttle(fn, delay){
+            var valid = true
+            return function(){
+                if(!valid){
+                    return false
+                }
+                valid = false
+                setTimeout(function(){
+                    fn()
+                    valid = true
+                }, delay)
+            }
+        }
+
+
+        window.onscroll = throttle(scrollHandle, 200)
+
+        function scrollHandle(){
+            console.log("yes")
+        }
+
+    </script>
+
+</body>
+
+</html>

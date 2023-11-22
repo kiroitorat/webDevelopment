@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="main_box">
+        <div class="boxg" id="box1"></div>
+        <div class="boxg" id="box2"></div>
+
+    </div>
+
+    <script> 
+        //1. 法一: 找到元素后设置属性
+        var box1 = document.getElementById("box1")
+        box1.setAttribute("style", "background:red; height:100px; width:100px;")
+
+        //2. 法二: 找到元素的style属性后设置
+        var box2 = document.getElementById("box2")
+        box2.style.height = "200px"
+        box2.style.width = "400px"
+        box2.style.background = "red"
+
+        //3. 法三: style.cssText
+    </script>
+
+</body>
+
+</html>
