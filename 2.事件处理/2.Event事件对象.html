@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <button id="btn">按钮</button>
+    <a href="www.baidu.com" id="baidu">百度一下</a>
+
+    <!-- 事件对象就是一个参数 
+            1.它有一些属性:
+                e.target 返回对象本身
+                e.type 返回事件类型
+                e.keyCode 表示键盘的ASC标识码, 比如a是65, 回车enter是13
+            2.它有一些方法
+                e.preventDefault() 阻止默认事件, 比如跳转浏览器
+                e.stopPropagation() 阻止冒泡, 比如父子元素都有事件, 子事件会带动父事件
+
+    -->
+    <script>
+        var btn = document.getElementById("btn")
+        btn.onclick = function(e){
+            <!-- e就是事件对象, 也可以叫event -->
+            console.log(e)
+            e.target.innerHTML = "点击之后"
+        }
+
+        var a = document.getElementById("baidu")
+        a.onclick = function(e){
+            e.preventDefault()
+        }
+
+    </script>
+</body>
+
+</html>

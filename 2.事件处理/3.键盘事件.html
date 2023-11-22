@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="name">keyup
+
+
+    <!-- 1.keydown 按下键盘触发
+         2.keypress 按下有值键触发, 也就是除开了ctrl等
+         3.keyup 松开键盘时触发
+    -->
+
+    <script>
+        var input = document.getElementById("name")
+        input.addEventListener("keyup", function(e){
+            console.log(e.target.value)
+            if (e.keyCode == 13){
+                console.log("回车!")
+            }
+        })
+    </script>
+
+</body>
+
+</html>

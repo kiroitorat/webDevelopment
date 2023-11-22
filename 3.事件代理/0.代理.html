@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 由于事件会冒泡, 向上传播到父节点
+        因此可以把子节点的监听函数定义在父节点上
+        这种叫做事件的代理
+    -->
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <script>
+
+        <!-- 点击子元素会触发父元素的事件 
+             这样可以通过获取父节点
+                    管理所有子节点的事件
+        -->
+        
+
+        var li = document.getElementById("list")
+        li.addEventListener("click", function(e){
+            if(e.target.tagName === "LI"){
+                console.log("yes, this is a list")
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>

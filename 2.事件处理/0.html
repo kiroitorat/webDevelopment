@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="main_box" id="box0">
+        <button id="button1">
+            点击我!
+        </button>
+
+    </div>
+
+    <script>
+
+        var bt = document.getElementById("button1");
+
+        bt.addEventListener("click", function(){
+            var v = document.createElement("p");
+            var text = document.createTextNode("嘻嘻喵");
+            v.style.width = "100px"
+            v.style.fontSize = "20px"
+
+            v.appendChild(text);
+            
+        })
+
+    </script>
+
+</body>
+
+</html>
